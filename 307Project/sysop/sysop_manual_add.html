@@ -1,0 +1,89 @@
+<html>
+    <body>
+        <h1>
+            Manually Add Professors and Courses
+        </h1>
+        <p>
+            Manual way to input professors and courses.
+        </p>
+
+
+        <button onclick="myFunction1()">Add Professor</button>
+        <button onclick="myFunction2()">Add Course</button>
+
+
+        <div id="addProfessor" style="display: block">
+            <form action="sysop_add_professor.php" method="post">
+                <h2>
+                    Add Professor
+                </h2>
+                <p>
+                    Professor can be identified by their email and course number.<br>
+                </p>
+                <h4>
+                    Type user email
+                </h4>
+                <p>
+                    Professor Email: <input type="text" name="email" placeholder='joseph@comp307.com'><br>
+                    Course Number: <input type="text" name="courseNum" placeholder='COMP 250'><br>
+                </p>
+                <h4>
+                    Enter all information
+                </h4>
+                <p>
+                    Faculty: <input type="text" name="faculty" placeholder='Science'><br>
+                    Department: <input type="text" name="department" placeholder='Computer Science'><br>
+                </p> 
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="addCourse" style="display: none">
+            <form action="sysop_add_course.php" method="post">
+                <h2>
+                    Add Course
+                </h2>
+                <p>
+                    Course can be identified by course number, term and year.<br>
+                </p>
+                <h4>
+                    Type course number, term and year
+                </h4>
+                <p>
+                    Course Number: <input type="text" name="courseNum" placeholder='COMP 307'><br>
+                    Term: <input type="text" name="term" placeholder='Winter'><br>
+                    Year: <input type="text" name="year" placeholder='2022'><br>                
+                </p>
+                <h4>
+                    Enter all information
+                </h4>
+                <p>
+                    Course Name: <input type="text" name="courseName" placeholder='Principles of Web Developement'><br>
+                    Course Description: <input type="text" name="courseDesc" placeholder='The course discusses the major principles, algorithms, languages and technologies that underlie web development.'><br>
+                    Professor Email: <input type="text" name="email" placeholder='joseph@comp307.com'><br>
+                </p> 
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <script>
+            function myFunction1() {
+              var x1 = document.getElementById("addProfessor");
+              x1.style.display = "none";
+              var x2 = document.getElementById("addCourse");
+              x2.style.display = "none";
+              x1.style.display = "block";
+            }
+            function myFunction2() {
+              var x1 = document.getElementById("addProfessor");
+              x1.style.display = "none";
+              var x2 = document.getElementById("addCourse");
+              x2.style.display = "none";
+              x2.style.display = "block";
+            }
+
+        </script>
+    </body>
+</html>

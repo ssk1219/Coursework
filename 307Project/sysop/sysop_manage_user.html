@@ -1,0 +1,163 @@
+<html>
+    <body>
+        <h1>
+            Manage User
+        </h1>
+        <p>
+            Manage user accounts (edit, delete, add).<br>
+            Click the button below to open the form.
+        </p>
+
+
+        <button onclick="myFunction1()">Edit User</button>
+        <button onclick="myFunction2()">Delete User</button>
+        <button onclick="myFunction3()">Add User</button>
+
+
+        <div id="edit" style="display: block">
+            <form action="sysop-manage-edit.php" method="post">
+                <h2>
+                    Edit User
+                </h2>
+                <p>
+                    User can be identified by their email.<br>
+                    If email is wrong, remove the the user.<br>
+                </p>
+                <h4>
+                    Type user email
+                </h4>
+                <p>
+                    User email: <input type="text" name="email" placeholder='avi@comp307.com'><br>
+                </p>
+                <h4>
+                    Enter information you wish to modify
+                </h4>
+                <p>
+                    First Name: <input type="text" name="firstName"  placeholder='Avinash'><br>
+                    Last Name: <input type="text" name="lastName" placeholder='Bhat'><br>
+                    Password: <input type="password" name="password" placeholder='p4ssw0rd'><br>
+                </p> 
+                <!--<h4>
+                    Enter new user type
+                </h4>
+                <p>
+                    <input type="checkbox" name="isStudent" value="Yes">
+                    <label for="isStudent">Student</label><br>
+                    <input type="checkbox" name="isProf" value="Yes">
+                    <label for="isProf">Professor</label><br>
+                    <input type="checkbox" name="isTA" value="Yes">
+                    <label for="isTA">TA (Teaching Assistant)</label><br>
+                    <input type="checkbox" name="isAdmin" value="Yes">
+                    <label for="isAdmin">Administration</label><br>
+                    <input type="checkbox" name="isSysop" value="Yes">
+                    <label for="isSysop">System Operator</label>
+                </p> -->
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="delete" style="display: none">
+            <form action="sysop-manage-delete.php" method="post">
+                <h2>
+                    Delete User
+                </h2>
+                <p>
+                    User can be identified by their email.<br>
+                </p>
+                <h4>
+                    Type user email
+                </h4>
+                <p>
+                    User email: <input type="text" name="email" placeholder='avi@comp307.com'><br>
+                </p>
+                <!--<h4>
+                    To confirm, type user password
+                </h4>
+                <p>
+                    Password: <input type="text" name="password"><br>
+                </p>-->
+                <h4>
+                    By clicking the submit below, you agree to pernamently delete the user.
+                </h4>
+                <p>
+                    <input type="checkbox" name="agreed" value="yes">
+                    <label for="agreed">Delete the user</label><br>
+                </p>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="add" style="display: none">
+            <form action="sysop-manage-add.php" method="post">
+                <h2>
+                    Add User
+                </h2>
+                <p>
+                    All user need a unique email address.<br>
+                </p>
+                <h4>
+                    Type user email
+                </h4>
+                <p>
+                    User email: <input type="text" name="email" placeholder='avi@comp307.com'><br>
+                </p>
+                <h4>
+                    Enter all information
+                </h4>
+                <p>
+                    First Name: <input type="text" name="firstName"  placeholder='Avinash'><br>
+                    Last Name: <input type="text" name="lastName" placeholder='Bhat'><br>
+                    Password: <input type="password" name="password" placeholder='p4ssw0rd'><br>
+                </p> 
+                <!--<h4>
+                    Enter user type(s)
+                </h4>
+                <p>
+                    <input type="checkbox" name="isStudent" value="Yes">
+                    <label for="isStudent">Student</label><br>
+                    <input type="checkbox" name="isProf" value="Yes">
+                    <label for="isProf">Professor</label><br>
+                    <input type="checkbox" name="isTA" value="Yes">
+                    <label for="isTA">TA (Teaching Assistant)</label><br>
+                    <input type="checkbox" name="isAdmin" value="Yes">
+                    <label for="isAdmin">Administration</label><br>
+                    <input type="checkbox" name="isSysop" value="Yes">
+                    <label for="isSysop">System Operator</label>
+                </p>-->
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <script>
+            function myFunction1() {
+              var x1 = document.getElementById("edit");
+              x1.style.display = "none";
+              var x2 = document.getElementById("delete");
+              x2.style.display = "none";
+              var x3 = document.getElementById("add");
+              x3.style.display = "none";
+              x1.style.display = "block";
+            }
+            function myFunction2() {
+              var x1 = document.getElementById("edit");
+              x1.style.display = "none";
+              var x2 = document.getElementById("delete");
+              x2.style.display = "none";
+              var x3 = document.getElementById("add");
+              x3.style.display = "none";
+              var x = document.getElementById("delete");
+              x2.style.display = "block";
+            }
+            function myFunction3() {
+              var x1 = document.getElementById("edit");
+              x1.style.display = "none";
+              var x2 = document.getElementById("delete");
+              x2.style.display = "none";
+              var x3 = document.getElementById("add");
+              x3.style.display = "none";
+              var x = document.getElementById("add");
+              x3.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!-- Aybala Bengi Canpolat
+260909564 -->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta name="description" content="LOGIN"> 
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="xampp, php, perl, apache, mysql, mariadb">
+        <link rel="icon" href="../media/favicon.ico" type="image/ico">
+        <link href="login.css" rel="stylesheet"> 
+        <script type="text/javascript" src="login.js".js"></script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    <div class="login">
+        <div class="welcome">
+            <form id="login-form" action="javascript:sendLoginRequest()" method="post">
+                <div class="form-inner">
+                  <img class="logo" src="../media/mcgill_logo.png" alt="mcgill-logo" />
+      
+                  <p class="top">Sign in with your email and password.</p>
+      
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="email"
+                      id="email"
+                      onChange=""
+                    />
+                  </div>
+      
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      id="password"
+                      onChange=""
+                    />
+                  </div>
+
+                  <div id="login-error"></div>
+      
+                  <div class="sign-in-button"">
+                    <input type="submit" value="Sign in"/>
+                  </div>
+      
+                  <p class="bottom">
+                    <a href="../register/register.html" class="links">Register</a>
+                  </p>
+                </div>
+              </form>
+        </div>
+
+        <div class="introduction">
+          <h2>Welcome to the SOCS TA Rating System</h2>
+
+          <div class="intro_list">
+          <ul class="fa-ul" name="student_intro">
+            <h4>As a Student, you can:</h4>
+            <li><i class="fa-li fa fa-address-card"></i>
+              Register to your classes and rate your TAs</li>
+            <li><i class="fa-li fa fa-comments-o"></i>
+              See the ratings yours peers gave</li>
+          </ul>
+        </div>
+
+
+
+        <div class="intro_list">
+          <ul class="fa-ul" name="ta_prof_intro">
+            <h4>As a TA or a Professor, you can:</h4>
+            <li><i class="fa-li fa fa-spinner fa-spin"></i>
+              Access the TA Management area and register for your courses</li>
+            <li><i class="fa-li fa fa-group"></i>
+              View feedback from your students</li>
+            <li><i class="fa-li fa fa-clock-o"></i>
+              Define your office hours, locations and duties</li>
+          </ul>
+        </div>
+
+
+        <div class="intro_list">
+          <ul class="fa-ul" name="ta_admin_info">
+              <h4>As a TA Administrator, you can:</h4>
+            <li><i class="fa-li fa fa-database"></i>
+              View your TA's information and history</li>
+             <li><i class="fa-li fa fa-cog fa-spin"></i>
+              Decide which TA should be assigned to a course</li>
+          </ul>
+          </div>
+
+
+
+
+
+        </div>
+    </div>
+    </body>
+</html>

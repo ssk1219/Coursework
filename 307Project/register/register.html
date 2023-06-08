@@ -1,0 +1,155 @@
+<!-- Aybala Bengi Canpolat
+260909564 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../media/favicon.ico" type="image/ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="register.css" rel="stylesheet"> 
+    <script src="register.js"></script>
+
+</head>
+<body>
+    <div class="register">
+        <form action="register.php" method="post">
+            <div class="reg-inner">
+                <img class="logo" src="../media/mcgill_logo.png" alt="mcgill-logo" /> 
+
+                <h2>Register to the SOCS TA Rating System</h2>
+
+                <p>Please fill in this form to create an account.</p>
+
+                <div class="form-group">
+                    First Name:
+                    <input
+                    type="text"
+                    name="firstName"
+                    placeholder="John" 
+                    id="firstName"
+                    onChange=""
+                    required/>
+                </div>
+      
+                <div class="form-group">
+                    Last Name:
+                    <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Doe"
+                    id="lastName"
+                    onChange=""
+                    required/>
+                </div>
+                
+                
+                <div class="form-group">
+                    Email:
+                    <input
+                    type="email"
+                    name="email"
+                    placeholder="jdoe@mail.com"
+                    id="email"
+                    onChange=""
+                    required/>
+                </div>
+
+
+                <div class="form-group">
+                    Password:
+                    <input 
+                    type="password"
+                    name="password"
+                    id="password"
+                    onChange=""
+                    required/>
+                </div>
+
+
+                <!-- TO DO: make selection required -->
+                <!-- Update: changed radio into checkbox -->
+                <label>What are you registering as?</label>
+                <br>
+                <div class="user-types-div">
+                <input type="checkbox"  name="user-types[]" id="student" value="student" onclick="displayMore()">Student
+                <input type="checkbox"  name="user-types[]" id="prof" value="prof" onclick="displayMore()">Professor
+                <input type="checkbox"  name="user-types[]" id="ta"  value="ta" onclick="displayMore()">Teaching Assistant
+                <input type="checkbox"  name="user-types[]" id="admin" value="admin">TA Administrator
+                <input type="checkbox"  name="user-types[]" id="sysop" value="sysop">System Operator 
+           
+
+
+
+               <div class="form-group" id="studentID-div" style="display: none;">
+                    Student ID number: <input
+                    type="number"
+                    minlength="9"
+                    maxlength="9"
+                    name="studentID"
+                    placeholder="Student ID"
+                    id="studentID"
+                    onChange=""
+                    />
+                </div> 
+
+
+                <div class="form-group" id="semester-div" style="display: none;">
+                    <p>Select your semester:</p>
+                    <input type="radio" name="semester" id="fall" onclick="renderCourses()">Fall 2022
+                    <input type="radio" name="semester" id="winter" onclick="renderCourses()">Winter 2023
+                </div>
+
+
+                <div class="form-group" id="courses-div" style="display: none;">
+                    Enter your course codes:
+                    <input type="text"
+                     name="courses" 
+                     id="course" 
+                     placeholder="COMP 202"/>
+
+                     <input type="text"
+                     name="courses" 
+                     id="course" 
+                     />
+
+                     <input type="text"
+                     name="courses" 
+                     id="course" 
+                     />
+
+                     <input type="text"
+                     name="courses" 
+                     id="course" 
+                     />
+
+                     <input type="text"
+                     name="courses" 
+                     id="course" 
+                     />
+                </div>
+
+
+              <div class="register-button">
+                <input type="submit" value="Register" />
+              </div>
+
+
+            </div>
+
+
+            <div class="login">
+                <p>Already have an account? <a href="../login/login.html">Log in</a></p>
+            </div>
+          
+        </form>
+    </div>
+
+
+
+
+    
+</body>
+</html>

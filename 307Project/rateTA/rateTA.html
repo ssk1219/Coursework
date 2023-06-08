@@ -1,0 +1,128 @@
+<!-- Aybala Bengi Canpolat
+2609096564 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="icon" href="../media/favicon.ico" type="image/ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate a TA</title>
+    <link href="rateTA.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+    <div class="container">
+
+      <nav class="navbar">
+        <!-- Header -->
+        <div class="container-fluid">
+          <!-- Logo and User Role  -->
+          <div class="d-flex align-items-center">
+            <img
+              src="../media/mcgill_logo.png"
+              style="width: 14rem; height: auto"
+              alt="mcgill-logo"
+            />
+            &emsp; &emsp;
+            <select class="custom-select" style="height: 30px; width: auto;
+            margin-bottom: 10px;">
+              <option value="sysop" selected="selected">Sysop</option>
+              <option value="student" selected="selected">Student</option>
+              <option value="prof" selected="selected">Professor</option>
+              <option value="TA" selected="selected">Teaching Assistant</option>
+              <option value="TAadmin" selected="selected">TA Administrator</option>
+            </select>
+          </div>
+          <!-- Logout -->
+          <div class="logout-btn">
+            <button
+              type="button"
+              class="btn btn-link"
+              style="width: 60px; height:auto;"
+              onclick="window.location.replace('../logout/logout.html')"
+            >
+              <i class="fa fa-sign-out" style="font-size: 30px"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+          <!-- Link to go back to dashboard -->
+          <div class="back">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          <a href="../dashboard/dashboard.html"> Back to Dashboard </a>
+          </div>
+          
+
+          <form action="rateTA.php" method="post">
+          <div class="rating-container">
+            <h2>Rate a TA</h2>
+            <hr>  <!-- horizontal line -->
+
+            <div class="semester-div">
+            Select a semester:
+            <input type="radio" id="fall" name="semester" value="fall">
+            <label for="html">Fall 2022</label>
+            <input type="radio" id="winter" name="semester" value="fall">
+            <label for="css">Winter 2023</label>
+          </div>
+     
+
+            <br>
+            <div class="courses-div">
+            <label for="courses">Select course number:</label>
+            <select name="courses" id="courses">
+              <option value="" disabled selected>--Courses--</option>
+              <option value="comp202">COMP 202</option>
+              <option value="comp307">COMP 307</option>
+              <option value="comp421">COMP 421</option>
+              <option value="math323">MATH 323</option>
+            </select>
+          </div>
+
+            <div class="TAs-div">
+            <br>
+            <label for="TAs">Select Teaching Assistant:</label>
+            <select name="TAs" id="TAs">
+              <option value="" disabled selected>--TAs--</option>
+              <option value="Avinash Bhat">Avinash Bhat</option>
+              <option value="Samuel Bergeron">Samuel Bergeron</option>
+              <option value="Lisa Morceau">Lisa Morceau</option>
+            </select>
+          </div>
+
+            <br>
+            Your Rating:
+            <div class="rating">
+              <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+              <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+              <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+              <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+              <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+            </div>
+
+
+
+            <br>
+            Comments:
+            <div class="comments">
+            <textarea rows="4" cols="50" name="comments" form="usrform"> Max 140 characters...</textarea>
+            </div>
+
+            <br>
+            <div class="rating-btn"">
+              <input type="submit" value="Submit"/>
+            </div>
+
+
+          </div>
+          </form>
+
+
+    </div>
+</body>
+</html>
