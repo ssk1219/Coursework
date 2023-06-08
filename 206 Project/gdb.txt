@@ -1,0 +1,44 @@
+Q1. Now imagine that your C program crashed (abort) while executing. You suspect that it is crashing inside the
+function generateAttendance. Describe what gdb commands (from compiling to executing the program) will
+you use, so that gdb will automatically stop execution at the beginning of the said function (using the most
+minimal steps to get to there).
+
+Answer:
+First, use gcc -g flag to use gdb once c program is compiled. In this project, I flagged -g inside makefile.
+Once, labapp is compiled using makefile, use command $gdb labapp to enter gdb mode.
+As we are suspecting that the crash is happening inside the function generateattendance, set a break point using (gdb) break generateAttendance. Setting breakpoint would stop the execution at the beginning of the generateAttendance.
+Then run the program using (gdb) run labdata.csv output.csv [Please note that labdata.csv and output.csv is the file I used to test the program, other names can be used as long as they are valid].
+Done! Now gdb arrived at the breakpoint: Breakpoint 1, generateAttendance (headptr=0x5555557598c0, out=0x555555757260) at zoomrecs.c:113
+
+
+---
+Q2. At this point, since you are not sure which part of the code is causing the issue, describe the sequence of
+commands that you will be executing. Continue the above investigation till you reach the part of your code
+where you are accessing the first node of the linked list (as passed or accessed by the generateAttendance or
+its helper functions) for the first time. Print the address pointed by that particular variable.
+
+Answer:
+At this point, gbd has arrived at generateAttendance.
+Since the first thing happening is to writing the head, use (gdb) next to jump to the next line where I use pointer to iterate the linked list.
+Assuming there was no error writing the head, I am at the part where I am creating a copy of headnode, the first node of the linked list. Use (gdb) next.
+Now, check the pointer variable that I am using to access the headnode. Use (gdb) print pointer to see the address of the variable pointer [Please note that the name of the pointer variable I am using to iterate the linkedlist is called pointer].
+For example,
+(gdb) print pointer
+$1 = (struct ZoomRecord *) 0x5555557598c0
+
+Note that since I am passing the headnode to generateAttendance, which is referred to as headptr, I could have used (gdb) print headptr to check the first node of the linkedlist and access the attributes using (gdb) print headptr->name.
+This would print the same result, for example:
+(gdb) print headptr
+$2 = (struct ZoomRecord *) 0x5555557598c0
+(gdb) print pointer
+$3 = (struct ZoomRecord *) 0x5555557598c0
+However, pointer and headptr would have pointed to the same node only after pointer copied the address pointed by headptr which requires (gdb) next operation.
+
+Also note that if we could have used the command (gdb) watch pointer to see the changes made to pointer variable. [This method was not used since my generateAttendance wasn't too complicated].
+
+In order to access the attributes stored inside the linkedlist, we can do (gdb) ptint pointer->attr
+For example,
+(gdb) print pointer->email
+$4 = "chung.tibbs@mail.mcgill.ca", '\000' <repeats 33 times>
+(gdb) print headptr->email
+$5 = "chung.tibbs@mail.mcgill.ca", '\000' <repeats 33 times>

@@ -1,0 +1,59 @@
+commit ccea83185eb642d40230116303e1a506d06b009c
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Wed Apr 28 08:23:43 2021 -0400
+
+    error fixed
+
+commit bec00949c4ff0a42bb9b9b77152a80e58820569b
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Wed Apr 28 04:45:37 2021 -0400
+
+    git file (just in case :) )
+
+commit 5e5f29e9281019b859ce83ac5f2145f0ba2f1de5
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Wed Apr 28 04:44:39 2021 -0400
+
+    Final Version
+
+commit 03039bdea78205282fea2e8428b18eeee75cb287
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Tue Apr 27 17:54:04 2021 -0400
+
+    CSV2HTML tested
+
+commit d3b67fc0397f1cf9243a54cf4c35808e047ab9f5
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Tue Apr 27 17:09:16 2021 -0400
+
+    Good ver - test passed
+
+commit 2e66c99cc1195c6ce35e3e3ed1286050f095a208
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Tue Apr 27 12:37:29 2021 -0400
+
+    labapp.c not tested
+
+commit 862b2e9b500c02b3ee6259d8b73fb0f83fa89ce2
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Tue Apr 27 11:22:31 2021 -0400
+
+    zoomrecs.c - not tested
+
+commit 4025a5f8547a088d9622e4c006008ef41170c967
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Tue Apr 27 07:03:48 2021 -0400
+
+    Crash-proof zoomrecs.h
+
+commit 52effc4824038d9e5f1d6536e61c078f990ce447
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Mon Apr 26 15:08:43 2021 -0400
+
+    fixformat.sh completed - checked with simple example
+
+commit 7e1787aa5e4b07d47b576fab0506ff1118cab5ab
+Author: Seunguk KIM <skim317@teaching.CS.McGill.CA>
+Date:   Mon Apr 26 10:17:18 2021 -0400
+
+    Created gdb.txt to initialize the directory
